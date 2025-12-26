@@ -14,9 +14,8 @@ The current version is 0.0.0. This project uses [semantic versioning](http://sem
 
 ## Features
 
-* First feature
-* Second feature
-* Third feature
+* Based on WordPress on 6.9 and PHP 8.3
+* Quick Setup of a new WordPress Environment
 
 
 
@@ -53,6 +52,10 @@ Show the version info and program install locations.
 $ docker compose run --rm wpcli --info
 ```
 
+Check out a list of WP-CLI commands to see what it can do. Review the [WP-CLI
+Handbook](https://make.wordpress.org/cli/handbook/) for access to additional
+resources.
+
 ## Installation
 
 * Clone this repo
@@ -73,7 +76,7 @@ $ docker compose run --rm wpcli --info
 ## Resources
 
 * [Semantic Versioning](http://semver.org)
-* [GitHub Markdown](https://help.github.com/categories/writing-on-github/)
+* [GitHub Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 * [Contributing Guidelines](https://help.github.com/articles/setting-guidelines-for-repository-contributors/)
 * [Changelog](docs/CHANGELOG.md)
 * [Humans TXT](http://humanstxt.org/) 
@@ -85,5 +88,5 @@ $ docker compose run --rm wpcli --info
 
 ## Credits and Acknowledgments
 
-* Project Creator:  [Firstname Lastname](https://example.com)
-* Current Maintainer: [Firstname Lastname](https://example.com)
+* Project Creator:  [Andrew Woods](https://andrewwoods.net)
+
