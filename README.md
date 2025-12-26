@@ -27,7 +27,31 @@ The current version is 0.0.0. This project uses [semantic versioning](http://sem
 * Screenshots
 * Submit Issues
 
+## Docker Commands
 
+* Run `docker compose up -d` to start your containers
+* Run `docker compose down` to stop your containers and _keep your data_
+* Run `docker compose down -v` to stop your containers and **destroy your data**
+
+### WordPress CLI
+
+The WP-CLI interface has been added to the compose.yaml file. This makes it
+easier to administer a WordPress install.
+
+The service name `wpcli` is needed to direct your commands to the right place.
+The rest of  the command is passed to WP-CLI for processing.
+
+Retrieve a list of all plugins, and show their status.
+
+```bash
+$ docker compose run --rm wpcli plugin list
+```
+
+Show the version info and program install locations.
+
+```bash
+$ docker compose run --rm wpcli --info
+```
 
 ## Installation
 

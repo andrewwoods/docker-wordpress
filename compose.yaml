@@ -28,6 +28,21 @@ services:
     volumes:
       - db:/var/lib/mysql
 
+  wpcli:
+    image: wordpress:cli
+    depends_on:
+      - wordpress
+    volumes:
+      - wordpress:/var/www/html
+    network_mode: service:wordpress
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: wpuser
+      WORDPRESS_DB_PASSWORD: example-123
+      WORDPRESS_DB_NAME: wp_standard
+    entrypoint: ["wp"]
+    command: ["user", "list"]
+
 volumes:
   wordpress:
   db:
