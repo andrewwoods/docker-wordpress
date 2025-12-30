@@ -1,5 +1,5 @@
 
-# WordPres
+# Docker WordPress
 
 __Write a plugin or theme for the latest WordPress__
 
@@ -51,6 +51,8 @@ Show the version info and program install locations.
 ```bash
 $ docker compose run --rm wpcli --info
 ```
+
+Use the `mkplugin.bash` script to simplify creation of new plugins
 
 Check out a list of WP-CLI commands to see what it can do. Review the [WP-CLI
 Handbook](https://make.wordpress.org/cli/handbook/) for access to additional
