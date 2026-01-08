@@ -52,6 +52,12 @@ Show the version info and program install locations.
 $ docker compose run --rm wpcli --info
 ```
 
+Show the web address (URL) of your website
+
+```bash
+docker compose run --rm wpcli option get siteurl
+```
+
 Use the `mkplugin.bash` script to simplify creation of new plugins
 
 Check out a list of WP-CLI commands to see what it can do. Review the [WP-CLI
