@@ -33,7 +33,8 @@ services:
       - db:/var/lib/mysql
 
   wpcli:
-    image: wordpress:cli
+    build:
+      dockerfile: ./WPcli.Dockerfile
     depends_on:
       - wordpress
     volumes:
