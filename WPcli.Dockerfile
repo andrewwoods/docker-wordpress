@@ -1,3 +1,4 @@
 FROM wordpress:cli
-WORKDIR /usr/src/wordpress
+WORKDIR /var/www/html
 
+RUN wp package install runcommand/media-sizes

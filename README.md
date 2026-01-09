@@ -58,6 +58,13 @@ Show the web address (URL) of your website
 docker compose run --rm wpcli option get siteurl
 ```
 
+The `media-sizes` package has been installed for your convenience. You may want
+to browse the available packages to see what else interests you.
+
+```bash
+docker compose run --rm wpcli media sizes
+```
+
 Use the `mkplugin.bash` script to simplify creation of new plugins
 
 Check out a list of WP-CLI commands to see what it can do. Review the [WP-CLI
