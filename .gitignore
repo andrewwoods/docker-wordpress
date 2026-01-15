@@ -25,6 +25,12 @@ phpdocs
 vendor
 
 #
+# External Projects
+#
+plugins/*/
+themes/*/
+
+#
 # Packaged files
 #
 *.7z
