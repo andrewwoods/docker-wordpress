@@ -52,7 +52,10 @@ Show the version info and program install locations.
 $ docker compose run --rm wpcli --info
 ```
 
-Show the web address (URL) of your website
+Show the web address (URL) of your website. Note: In a docker environment, the
+`wpcli admin` command isn't useful, since it can't open the browser on your
+host. Instead, use this command to print the siteurl value, and copy/paste it
+into your browser.
 
 ```bash
 docker compose run --rm wpcli option get siteurl
