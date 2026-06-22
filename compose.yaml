@@ -4,14 +4,14 @@ services:
     restart: always
     ports:
       - 8080:80
-    environment:
+    environment: &wp-env
       WORDPRESS_DB_HOST: db
       WORDPRESS_DB_USER: wpuser
       WORDPRESS_DB_PASSWORD: example-123
       WORDPRESS_DB_NAME: wp_standard 
       WORDPRESS_DEBUG: true 
       WORDPRESS_DEBUG_LOG: true 
-    volumes:
+    volumes: &wp-volumes
       - wordpress:/var/www/html
       - ./plugins:/var/www/html/wp-content/plugins
       - ./themes:/var/www/html/wp-content/themes
@@ -36,19 +36,9 @@ services:
   wpcli:
     build:
       dockerfile: ./WPcli.Dockerfile
-    depends_on:
-      - wordpress
-    volumes:
-      - wordpress:/var/www/html
-      - ./plugins:/var/www/html/wp-content/plugins
-      - ./themes:/var/www/html/wp-content/themes
-
+    environment: *wp-env
+    volumes: *wp-volumes
     network_mode: service:wordpress
-    environment:
-      WORDPRESS_DB_HOST: db
-      WORDPRESS_DB_USER: wpuser
-      WORDPRESS_DB_PASSWORD: example-123
-      WORDPRESS_DB_NAME: wp_standard
     entrypoint: ["wp"]
     command: ["user", "list"]
 
