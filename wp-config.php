@@ -129,6 +129,7 @@ $table_prefix = getenv_docker('WORDPRESS_TABLE_PREFIX', 'wp_');
  *
  * @link https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/
  */
+error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_USER_DEPRECATED);
 define('WP_DEBUG', !!getenv_docker('WORDPRESS_DEBUG', ''));
 if (WP_DEBUG) {
     define('WP_DEBUG_LOG', true);
