@@ -13,6 +13,7 @@ services:
     volumes: &wp-volumes
       - wordpress:/var/www/html
       - ./wp-content:/var/www/html/wp-content
+      - ./wp-config.php:/var/www/html/wp-config.php
     build:
       dockerfile: ./WordPress.Dockerfile
 
