@@ -132,9 +132,9 @@ $table_prefix = getenv_docker('WORDPRESS_TABLE_PREFIX', 'wp_');
 error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_USER_DEPRECATED);
 define('WP_DEBUG', !!getenv_docker('WORDPRESS_DEBUG', ''));
 if (WP_DEBUG) {
-    define('WP_DEBUG_LOG', true);
     define('WP_DEBUG_DISPLAY', false);
     define('SAVEQUERIES', true);
+    define('SCRIPT_DEBUG', true);
 }
 
 
@@ -151,6 +151,8 @@ if ($configExtra = getenv_docker('WORDPRESS_CONFIG_EXTRA', '')) {
     eval($configExtra);
 }
 
+define('WP_DEBUG_LOG', '/var/www/html/wp-content/uploads/debug-log-manager/localhost_20260106233013481179_debug.log');
+define('DISALLOW_FILE_EDIT', false);
 /* That's all, stop editing! Happy publishing. */
 
 /**
