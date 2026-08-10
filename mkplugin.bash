@@ -13,8 +13,8 @@ function mkplugin {
 
     #--dir="wordpress/content/plugins" \
     docker compose run --rm wpcli --prompt=plugin_name,plugin_description,plugin_uri scaffold plugin \
-    --plugin_author="Andrew Woods" \
-    --plugin_author_uri="https://andrewwoods.net" \
+    --plugin_author="your_wp_org_username" \
+    --plugin_author_uri="https://example.com" \
     --ci="github" \
     $slug
 }
